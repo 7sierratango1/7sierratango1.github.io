@@ -240,3 +240,41 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,.08);
   margin: 12px 0;
 }
+
+
+/* --- Rev 1.0.6 footer refresh --- */
+footer.site-footer{
+  position: relative;
+  overflow: hidden;
+}
+footer.site-footer::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(900px 220px at 15% 30%, rgba(255, 0, 153, .22), transparent 60%),
+    radial-gradient(760px 240px at 85% 40%, rgba(0, 255, 153, .16), transparent 62%),
+    radial-gradient(700px 220px at 55% 120%, rgba(255, 204, 0, .14), transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.55));
+  filter: blur(0px);
+  pointer-events:none;
+  z-index:0;
+}
+footer.site-footer > *{
+  position: relative;
+  z-index: 1;
+}
+footer.site-footer .footer-card{
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.45);
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+}
+footer.site-footer .footer-title{
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+footer.site-footer .footer-sub{
+  opacity: .85;
+}

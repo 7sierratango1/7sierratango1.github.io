@@ -1,4 +1,4 @@
-# 7SierraTango1 Modern Site (Rev 1.0.5)
+# 7SierraTango1 Modern Site (Rev 1.0.6)
 
 This is a **modern, neon, logo-matched** static website starter. It is designed to be **very different** from your current Google Site,
 and to give every tool/game its own home with simple, programmable pages.
