@@ -1,4 +1,4 @@
-# 7SierraTango1 Modern Site (Rev 1.0.3)
+# 7SierraTango1 Modern Site (Rev 1.0.5)
 
 This is a **modern, neon, logo-matched** static website starter. It is designed to be **very different** from your current Google Site,
 and to give every tool/game its own home with simple, programmable pages.
@@ -67,3 +67,9 @@ If you paste the list (or upload an export / screenshot list), I’ll populate `
 ## Twitch embed
 Twitch embeds require the `parent` query parameter to match your site domain.
 This project auto-sets `parent` to the current hostname.
+
+
+## Placeholders
+- (set): replace with your Discord invite/server link
+- (set): replace with your Battle.net profile link
+- YOUR_EMAIL_HERE: replace with your preferred contact email
