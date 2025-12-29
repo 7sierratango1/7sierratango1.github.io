@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7SierraTango1 • Subscriber Tools</title>
+  <link rel="icon" href="/assets/img/logo.png" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Home">
+        <img src="/assets/img/logo.png" alt="7SierraTango1 logo" />
+        <div class="title"><span>7SierraTango1</span><div class="small">Tools • Games • Builds</div></div>
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a class="pill" href="/tools.html">Tools</a>
+        <a class="pill" href="/games.html">Games</a>
+        <a class="pill" href="/stream.html">Stream</a>
+        <a class="pill is-primary" href="/members/login.html">Members</a>
+      </nav>
+    </div>
+  </header>
+
+  
+<main class="container section">
+  <div class="card glow">
+    <div class="kbd" id="who">Welcome</div>
+    <h2 style="margin-top:10px;">Subscriber Tools</h2>
+    <p>Put your premium tool links here (these can be separate pages, downloadable apps, or embedded web apps).</p>
+    <div class="hr"></div>
+    <div style="display:grid; gap:12px;">
+      <div class="item"><div><h3>Premium Tool #1</h3><p>Link to your subscriber-only build planner, calculator, or download.</p></div><a class="btn primary" href="#">Open</a></div>
+      <div class="item"><div><h3>Premium Tool #2</h3><p>Another protected tool.</p></div><a class="btn" href="#">Open</a></div>
+    </div>
+    <div class="hr"></div>
+    <button class="btn" id="logoutBtn">Logout</button>
+  </div>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2025 7SierraTango1 • Neon theme matched to your logo palette.</div>
+      <div class="small">Built as a fast static site. Host anywhere (Cloudflare Pages / Netlify / GitHub Pages) and point your domain.</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+  
+<script src="/assets/js/auth.js"></script>
+<script>
+Members.requireSubscriber();
+document.getElementById("logoutBtn").addEventListener("click", () => { Members.clearSession(); window.location.href="/"; });
+</script>
+
+</body>
+</html>

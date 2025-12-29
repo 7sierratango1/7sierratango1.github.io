@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7SierraTango1 • Tools</title>
+  <link rel="icon" href="/assets/img/logo.png" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Home">
+        <img src="/assets/img/logo.png" alt="7SierraTango1 logo" />
+        <div class="title"><span>7SierraTango1</span><div class="small">Tools • Games • Builds</div></div>
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a class="pill" href="/tools.html">Tools</a>
+        <a class="pill" href="/games.html">Games</a>
+        <a class="pill" href="/stream.html">Stream</a>
+        <a class="pill is-primary" href="/members/login.html">Members</a>
+      </nav>
+    </div>
+  </header>
+
+  
+<main class="container section">
+  <h2>Tools</h2>
+  <p>Everything on your current site can live here, each with its own home. Add entries in <span class="kbd">/data/tools.json</span>.</p>
+
+  <div class="grid">
+    <div class="card col-4">
+      <h2 style="margin-top:0;">Search</h2>
+      <input class="search" id="q" placeholder="Search tools (name, tags, description)..." />
+      <div class="small" style="margin-top:10px;">Examples: <span class="kbd">Diablo</span> <span class="kbd">planner</span> <span class="kbd">3D</span></div>
+    </div>
+
+    <div class="card col-8">
+      <div id="list" style="display:grid; gap:12px;"></div>
+    </div>
+  </div>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2025 7SierraTango1 • Neon theme matched to your logo palette.</div>
+      <div class="small">Built as a fast static site. Host anywhere (Cloudflare Pages / Netlify / GitHub Pages) and point your domain.</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+  
+<script>
+(async () => {
+  const items = await Site.loadJson("/data/tools.json");
+  const list = Site.qs("#list");
+  Site.renderList(list, items);
+  Site.wireSearch("#q", items, (filtered) => Site.renderList(list, filtered));
+})();
+</script>
+
+</body>
+</html>

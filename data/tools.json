@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Diablo IV Build Library",
+    "description": "Searchable build pages, gear/aspect selectors, and planners.",
+    "tags": [
+      "tool",
+      "diablo",
+      "planner"
+    ],
+    "status": "Public",
+    "url": "#"
+  },
+  {
+    "name": "Necromancer Damage Calculator",
+    "description": "Damage logging + calculator hub (link your hosted app or download page).",
+    "tags": [
+      "tool",
+      "diablo",
+      "necromancer"
+    ],
+    "status": "Public",
+    "url": "#"
+  },
+  {
+    "name": "3D Print Helper",
+    "description": "PETG tuning notes, profiles, and utilities.",
+    "tags": [
+      "tool",
+      "3D printing"
+    ],
+    "status": "Public",
+    "url": "#"
+  },
+  {
+    "name": "Media Forensics Toolkit",
+    "description": "File analysis, image checks, and utilities.",
+    "tags": [
+      "tool",
+      "forensics"
+    ],
+    "status": "Public",
+    "url": "#"
+  },
+  {
+    "name": "Premium Build Optimizer",
+    "description": "Subscriber-only optimizer and advanced presets.",
+    "tags": [
+      "tool",
+      "member",
+      "subscriber"
+    ],
+    "status": "Members",
+    "url": "/members/app.html"
+  }
+]

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7SierraTango1 • Members Login</title>
+  <link rel="icon" href="/assets/img/logo.png" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html" aria-label="Home">
+        <img src="/assets/img/logo.png" alt="7SierraTango1 logo" />
+        <div class="title"><span>7SierraTango1</span><div class="small">Tools • Games • Builds</div></div>
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a class="pill" href="/tools.html">Tools</a>
+        <a class="pill" href="/games.html">Games</a>
+        <a class="pill" href="/stream.html">Stream</a>
+        <a class="pill is-primary" href="/members/login.html">Members</a>
+      </nav>
+    </div>
+  </header>
+
+  
+<main class="container section">
+  <div class="grid">
+    <div class="card col-6 glow">
+      <h2 style="margin-top:0;">Members Login</h2>
+      <p>Subscriber-only specialty tools live behind this gate.</p>
+      <div class="hr"></div>
+      <button class="btn primary" id="loginBtn">Login with Twitch (placeholder)</button>
+      <p class="small" id="status" style="margin-top:12px;">Not logged in.</p>
+      <div class="notice">
+        <b>Important:</b> Real subscriber gating requires a backend that verifies Twitch OAuth and checks subscription status via Twitch API.
+        This starter includes the frontend pages and placeholders.
+      </div>
+    </div>
+
+    <div class="card col-6">
+      <h2 style="margin-top:0;">What you get</h2>
+      <div style="display:grid; gap:12px;">
+        <div class="item"><div><h3>Specialty Tools</h3><p>Advanced calculators, premium planners, and downloads.</p></div><span class="badge pink">SUBS</span></div>
+        <div class="item"><div><h3>Early Access</h3><p>Try new builds, overlays, and utilities before public release.</p></div><span class="badge blue">BETA</span></div>
+        <div class="item"><div><h3>Support</h3><p>One login covers all protected pages.</p></div><span class="badge green">ACCESS</span></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2025 7SierraTango1 • Neon theme matched to your logo palette.</div>
+      <div class="small">Built as a fast static site. Host anywhere (Cloudflare Pages / Netlify / GitHub Pages) and point your domain.</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+  
+<script src="/assets/js/auth.js"></script>
+<script>
+document.getElementById("loginBtn").addEventListener("click", () => Members.handleLogin());
+</script>
+
+</body>
+</html>
