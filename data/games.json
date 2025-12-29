@@ -1,35 +1,13 @@
 [
   {
     "name": "Twitch Chat Trivia",
-    "description": "Diablo IV themed trivia game for chat.",
+    "description": "Interactive trivia game for Twitch chat.",
     "tags": [
       "game",
       "twitch",
       "trivia"
     ],
     "status": "Public",
-    "url": "#"
-  },
-  {
-    "name": "Wheel Spinner",
-    "description": "Interactive wheel for giveaways and chat events.",
-    "tags": [
-      "game",
-      "twitch",
-      "wheel"
-    ],
-    "status": "Public",
-    "url": "#"
-  },
-  {
-    "name": "Battle System",
-    "description": "Chat battles with rewards, XP, and gear.",
-    "tags": [
-      "game",
-      "twitch",
-      "rpg"
-    ],
-    "status": "Public",
-    "url": "#"
+    "url": "https://sites.google.com/view/7sierratango1/games/trivia-game"
   }
 ]

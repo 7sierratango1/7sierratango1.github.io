@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>7SierraTango1 • Tools</title>
+  <title>7SierraTango1 • Audio</title>
   <link rel="icon" href="/assets/img/logo.png" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
   
@@ -28,15 +28,16 @@
   </header>
 
   
+
 <main class="container section">
-  <h2>Tools</h2>
-  <p>Everything on your current site can live here, each with its own home. Add entries in <span class="kbd">/data/tools.json</span>.</p>
+  <h2>Audio</h2>
+  <p>Listen on YouTube under artist <span class="kbd">7SierraTango1</span>. Add entries in <span class="kbd">/data/audio.json</span>.</p>
 
   <div class="grid">
     <div class="card col-4">
       <h2 style="margin-top:0;">Search</h2>
-      <input class="search" id="q" placeholder="Search tools (name, tags, description)..." />
-      <div class="small" style="margin-top:10px;">Examples: <span class="kbd">Diablo</span> <span class="kbd">planner</span> <span class="kbd">3D</span></div>
+      <input class="search" id="q" placeholder="Search audio..." />
+      <div class="small" style="margin-top:10px;">Tip: search by name, tags, or description.</div>
     </div>
 
     <div class="card col-8">
@@ -44,6 +45,7 @@
     </div>
   </div>
 </main>
+
 
 
   <footer class="footer">
@@ -57,7 +59,7 @@
   
 <script>
 (async () => {
-  const items = await Site.loadJson("/data/tools.json");
+  const items = await Site.loadJson("/data/audio.json");
   const list = Site.qs("#list");
   Site.renderList(list, items);
   Site.wireSearch("#q", items, (filtered) => Site.renderList(list, filtered));

@@ -1,49 +1,66 @@
 [
   {
-    "name": "Diablo IV Build Library",
-    "description": "Searchable build pages, gear/aspect selectors, and planners.",
+    "name": "Diablo 4 Name Generator",
+    "description": "Generate Diablo IV-themed character names.",
     "tags": [
       "tool",
       "diablo",
-      "planner"
+      "name generator"
     ],
     "status": "Public",
-    "url": "#"
+    "url": "https://sites.google.com/view/7sierratango1/tools/diablo-4-name-generator"
   },
   {
     "name": "Necromancer Damage Calculator",
-    "description": "Damage logging + calculator hub (link your hosted app or download page).",
+    "description": "Calculate and analyze Diablo IV Necromancer damage output.",
     "tags": [
       "tool",
       "diablo",
-      "necromancer"
+      "necromancer",
+      "calculator"
     ],
     "status": "Public",
-    "url": "#"
+    "url": "https://sites.google.com/view/7sierratango1/tools/necro-damage-calculator"
   },
   {
-    "name": "3D Print Helper",
-    "description": "PETG tuning notes, profiles, and utilities.",
+    "name": "Giveaway Wheel",
+    "description": "Interactive giveaway wheel for Twitch streams and live events.",
     "tags": [
       "tool",
-      "3D printing"
+      "twitch",
+      "giveaway",
+      "wheel"
     ],
     "status": "Public",
-    "url": "#"
+    "url": "https://sites.google.com/view/7sierratango1/tools/giveaway-wheel"
   },
   {
     "name": "Media Forensics Toolkit",
-    "description": "File analysis, image checks, and utilities.",
+    "description": "Tools for analyzing and inspecting media files.",
     "tags": [
       "tool",
-      "forensics"
+      "forensics",
+      "media",
+      "analysis"
     ],
     "status": "Public",
-    "url": "#"
+    "url": "https://sites.google.com/view/7sierratango1/tools/media-forensics"
   },
   {
-    "name": "Premium Build Optimizer",
-    "description": "Subscriber-only optimizer and advanced presets.",
+    "name": "Loot Tables",
+    "description": "Reference tables for loot drops and rewards.",
+    "tags": [
+      "tool",
+      "loot",
+      "drops",
+      "reference"
+    ],
+    "status": "Public",
+    "url": "https://sites.google.com/view/7sierratango1/tools/loot-tables"
+  },
+  {
+    "name": "Premium Tools Hub",
+    "description": "Subscriber-only specialty tools (gated).",
     "tags": [
       "tool",
       "member",

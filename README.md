@@ -1,4 +1,4 @@
-# 7SierraTango1 Modern Site (Rev 1.0.1)
+# 7SierraTango1 Modern Site (Rev 1.0.2)
 
 This is a **modern, neon, logo-matched** static website starter. It is designed to be **very different** from your current Google Site,
 and to give every tool/game its own home with simple, programmable pages.
@@ -54,3 +54,11 @@ If you want, tell me which backend you prefer (Cloudflare Worker or Firebase), a
 ## Next steps to match YOUR current site content
 I did not copy the tool/game list from `7sierratango1.com` because I don’t have the page inventory in this workspace.
 If you paste the list (or upload an export / screenshot list), I’ll populate `tools.json` and `games.json` for you.
+
+
+## Sections
+- Tools: /tools.html (data/tools.json)
+- Games: /games.html (data/games.json)
+- 3D Printing: /3d-printing.html (data/3d-printing.json)
+- Books: /books.html (Coming Soon)
+- Audio: /audio.html (data/audio.json)
