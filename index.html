@@ -21,6 +21,7 @@
         <a class="pill" href="/3d-printing.html">3D Printing</a>
         <a class="pill" href="/books.html">Books</a>
         <a class="pill" href="/audio.html">Audio</a>
+        <a class="pill" href="/about.html">About</a>
         <a class="pill" href="/stream.html">Stream</a>
         <a class="pill is-primary" href="/members/login.html">Members</a>
       </nav>
@@ -28,37 +29,66 @@
   </header>
 
   
+
 <main class="container hero">
   <div class="hero-grid">
-    <section class="card glow">
-      <div class="kbd">7SierraTango1 • Modern Hub</div>
-      <h1 class="h1">One home for every tool, game, and build.</h1>
-      <p class="lede">
-        This layout is designed to be <b>very different</b> from your current Google Site: minimal, dark, neon, and built around
-        button-linked pages so you can add tools/games without redesigning the whole site.
+    <section class="card glow" style="text-align:center;">
+      <img src="/assets/img/logo.png" alt="7SierraTango1 logo" style="width:140px; height:140px; border-radius:999px; box-shadow: var(--shadow);" />
+      <h1 class="h1" style="margin-top:14px;">7SierraTango1</h1>
+      <p class="lede" style="margin:0 0 16px;">
+        <b>Influencer</b> • <b>Content Creator</b><br/>
+        <b>Gamer</b> • <b>Developer</b>
       </p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn primary" href="/tools.html">Browse Tools</a>
-        <a class="btn" href="/games.html">Browse Games</a>
-        <a class="btn" href="/members/login.html">Subscriber Tools</a>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+        <a class="btn primary" href="/about.html">About Me</a>
+        <a class="btn" href="/tools.html">Tools</a>
+        <a class="btn" href="/games.html">Games</a>
+        <a class="btn" href="https://twitch.tv/7sierratango1" target="_blank" rel="noreferrer">Open Twitch</a>
       </div>
+
       <div class="hr"></div>
-      <p class="notice">
-        Tip: To add a new tool/game page, create a new HTML file (or use a hosted link) and add a button in the JSON lists.
+
+      <p class="notice" style="margin:0;">
+        Live stream embed below. If the player is blocked, Twitch requires your domain to be added to the embed <span class="kbd">parent</span> list.
       </p>
     </section>
 
     <aside class="card">
+      <h2 style="margin-top:0;">Live on Twitch</h2>
+      <div class="small" style="margin-bottom:10px;">Channel: <span class="kbd">twitch.tv/7sierratango1</span></div>
+
+      <div style="border:1px solid rgba(255,255,255,.10); border-radius: 16px; overflow:hidden; background: rgba(0,0,0,.35);">
+        <iframe
+          data-twitch-embed="player"
+          src="https://player.twitch.tv/?channel=7sierratango1&parent=localhost&muted=true"
+          height="360"
+          width="100%"
+          allowfullscreen="true"
+          scrolling="no"
+          frameborder="0">
+        </iframe>
+      </div>
+
+      <div class="small" style="margin-top:10px; line-height:1.5;">
+        This site auto-sets <span class="kbd">parent</span> to your current hostname. If you add a custom domain, it should work automatically.
+      </div>
+
+      <div class="hr"></div>
+
       <h2 style="margin-top:0;">Quick Links</h2>
       <div style="display:grid; gap:10px;">
-        <a class="item" href="/tools.html"><div><h3>Tools Library</h3><p>All utilities, calculators, planners, downloads.</p></div><span class="badge blue">TOOLS</span></a>
+        <a class="item" href="/tools.html"><div><h3>Tools Library</h3><p>Utilities, calculators, planners, downloads.</p></div><span class="badge blue">TOOLS</span></a>
         <a class="item" href="/games.html"><div><h3>Games Library</h3><p>Interactive web games and Twitch chat games.</p></div><span class="badge green">GAMES</span></a>
-        <a class="item" href="/stream.html"><div><h3>Stream</h3><p>Schedule, socials, and Twitch entry points.</p></div><span class="badge pink">LIVE</span></a>
-        <a class="item" href="/members/login.html"><div><h3>Members</h3><p>Subscriber-only specialty tools (gated).</p></div><span class="badge pink">MEMBERS</span></a>
+        <a class="item" href="/3d-printing.html"><div><h3>3D Printing</h3><p>Threads, lithographs, and printing utilities.</p></div><span class="badge blue">MAKER</span></a>
+        <a class="item" href="/audio.html"><div><h3>Audio</h3><p>YouTube audio under 7SierraTango1.</p></div><span class="badge green">MEDIA</span></a>
+        <a class="item" href="/books.html"><div><h3>Books</h3><p>Guides and long-form content.</p></div><span class="badge pink">SOON</span></a>
+        <a class="item" href="/members/login.html"><div><h3>Members</h3><p>Subscriber-only specialty tools.</p></div><span class="badge pink">MEMBERS</span></a>
       </div>
     </aside>
   </div>
 </main>
+
 
 <section class="section">
   <div class="container">
@@ -88,6 +118,7 @@
   </footer>
 
   <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/twitch-embed.js"></script>
   
 </body>
 </html>

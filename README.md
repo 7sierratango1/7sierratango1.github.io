@@ -1,4 +1,4 @@
-# 7SierraTango1 Modern Site (Rev 1.0.2)
+# 7SierraTango1 Modern Site (Rev 1.0.3)
 
 This is a **modern, neon, logo-matched** static website starter. It is designed to be **very different** from your current Google Site,
 and to give every tool/game its own home with simple, programmable pages.
@@ -62,3 +62,8 @@ If you paste the list (or upload an export / screenshot list), I’ll populate `
 - 3D Printing: /3d-printing.html (data/3d-printing.json)
 - Books: /books.html (Coming Soon)
 - Audio: /audio.html (data/audio.json)
+
+
+## Twitch embed
+Twitch embeds require the `parent` query parameter to match your site domain.
+This project auto-sets `parent` to the current hostname.
