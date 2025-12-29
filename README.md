@@ -1,4 +1,4 @@
-# 7SierraTango1 Modern Site (Rev 1.0.6)
+# 7SierraTango1 Modern Site (Rev 1.0.9)
 
 This is a **modern, neon, logo-matched** static website starter. It is designed to be **very different** from your current Google Site,
 and to give every tool/game its own home with simple, programmable pages.
@@ -70,6 +70,15 @@ This project auto-sets `parent` to the current hostname.
 
 
 ## Placeholders
-- (set): replace with your Discord invite/server link
-- (set): replace with your Battle.net profile link
+- DISCORD_INVITE_URL: replace with your Discord invite/server link
+- BATTLE_NET_URL: replace with your Battle.net profile link
 - YOUR_EMAIL_HERE: replace with your preferred contact email
+
+
+Rev 1.0.9
+- Global neon image background
+- Neon image-based buttons
+
+
+Rev 1.0.9
+- Page-specific background images applied to tools and games
