@@ -1,4 +1,4 @@
-# 7SierraTango1 Modern Site (Rev 1.0.10)
+# 7SierraTango1 Modern Site (Rev 1.0.11)
 
 This is a **modern, neon, logo-matched** static website starter. It is designed to be **very different** from your current Google Site,
 and to give every tool/game its own home with simple, programmable pages.
@@ -75,14 +75,14 @@ This project auto-sets `parent` to the current hostname.
 - YOUR_EMAIL_HERE: replace with your preferred contact email
 
 
-Rev 1.0.10
+Rev 1.0.11
 - Global neon image background
 - Neon image-based buttons
 
 
-Rev 1.0.10
+Rev 1.0.11
 - Page-specific background images applied to tools and games
 
 
-Rev 1.0.10
+Rev 1.0.11
 - Removed legacy footer marketing block site-wide

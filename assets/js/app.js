@@ -11,18 +11,29 @@ function renderList(container, items) {
   container.innerHTML = "";
   for (const it of items) {
     const el = document.createElement("div");
-    el.className = "item";
+    el.className = "item tool-card";
+
+    const bannerUrl = it.banner || "/assets/img/button-bg.png";
+    const safeBanner = String(bannerUrl).replace(/"/g, "&quot;");
+
     el.innerHTML = `
-      <div>
-        <h3>${escapeHtml(it.name)}</h3>
-        <p>${escapeHtml(it.description || "")}</p>
-        <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
-          ${(it.tags||[]).map(t => `<span class="badge ${badgeColor(t)}">${escapeHtml(t)}</span>`).join("")}
+      <div class="tool-banner" style="background-image:url('${safeBanner}')">
+        <div class="tool-banner-overlay">
+          <h3 class="tool-title">${escapeHtml(it.name)}</h3>
+          ${it.status ? `<span class="badge blue tool-status">${escapeHtml(it.status)}</span>` : ""}
         </div>
       </div>
-      <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-end;">
-        ${it.status ? `<span class="badge blue">${escapeHtml(it.status)}</span>` : ""}
-        ${it.url ? `<a class="btn primary" href="${it.url}" target="_blank" rel="noreferrer">Open</a>` : ""}
+
+      <div class="tool-body">
+        <p class="tool-desc">${escapeHtml(it.description || "")}</p>
+
+        <div class="tool-tags">
+          ${(it.tags||[]).map(t => `<span class="badge ${badgeColor(t)}">${escapeHtml(t)}</span>`).join("")}
+        </div>
+
+        <div class="tool-actions">
+          ${it.url ? `<a class="btn primary" href="${it.url}" target="_blank" rel="noreferrer">Open</a>` : ""}
+        </div>
       </div>
     `;
     container.appendChild(el);

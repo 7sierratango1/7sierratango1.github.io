@@ -8,7 +8,8 @@
       "name generator"
     ],
     "status": "Public",
-    "url": "https://sites.google.com/view/7sierratango1/tools/diablo-4-name-generator"
+    "url": "https://sites.google.com/view/7sierratango1/tools/diablo-4-name-generator",
+    "banner": "/assets/img/page-bg/name-generator.png"
   },
   {
     "name": "Necromancer Damage Calculator",
@@ -20,7 +21,8 @@
       "calculator"
     ],
     "status": "Public",
-    "url": "https://sites.google.com/view/7sierratango1/tools/necro-damage-calculator"
+    "url": "https://sites.google.com/view/7sierratango1/tools/necro-damage-calculator",
+    "banner": "/assets/img/page-bg/necro-calculator.png"
   },
   {
     "name": "Giveaway Wheel",
@@ -32,7 +34,8 @@
       "wheel"
     ],
     "status": "Public",
-    "url": "https://sites.google.com/view/7sierratango1/tools/giveaway-wheel"
+    "url": "https://sites.google.com/view/7sierratango1/tools/giveaway-wheel",
+    "banner": "/assets/img/button-bg.png"
   },
   {
     "name": "Media Forensics Toolkit",
@@ -44,7 +47,8 @@
       "analysis"
     ],
     "status": "Public",
-    "url": "https://sites.google.com/view/7sierratango1/tools/media-forensics"
+    "url": "https://sites.google.com/view/7sierratango1/tools/media-forensics",
+    "banner": "/assets/img/page-bg/media-forensics.png"
   },
   {
     "name": "Loot Tables",
@@ -56,17 +60,7 @@
       "reference"
     ],
     "status": "Public",
-    "url": "https://sites.google.com/view/7sierratango1/tools/loot-tables"
-  },
-  {
-    "name": "Premium Tools Hub",
-    "description": "Subscriber-only specialty tools (gated).",
-    "tags": [
-      "tool",
-      "member",
-      "subscriber"
-    ],
-    "status": "Members",
-    "url": "/members/app.html"
+    "url": "https://sites.google.com/view/7sierratango1/tools/loot-tables",
+    "banner": "/assets/img/button-bg.png"
   }
 ]
