@@ -9,7 +9,7 @@
     ],
     "status": "Public",
     "url": "https://sites.google.com/view/7sierratango1/tools/diablo-4-name-generator",
-    "banner": "/assets/img/page-bg/name-generator.png"
+    "banner": "assets/img/page-bg/name-generator.png"
   },
   {
     "name": "Necromancer Damage Calculator",
@@ -22,7 +22,7 @@
     ],
     "status": "Public",
     "url": "https://sites.google.com/view/7sierratango1/tools/necro-damage-calculator",
-    "banner": "/assets/img/page-bg/necro-calculator.png"
+    "banner": "assets/img/page-bg/necro-calculator.png"
   },
   {
     "name": "Giveaway Wheel",
@@ -35,7 +35,7 @@
     ],
     "status": "Public",
     "url": "https://sites.google.com/view/7sierratango1/tools/giveaway-wheel",
-    "banner": "/assets/img/button-bg.png"
+    "banner": "assets/img/button-bg.png"
   },
   {
     "name": "Media Forensics Toolkit",
@@ -48,7 +48,7 @@
     ],
     "status": "Public",
     "url": "https://sites.google.com/view/7sierratango1/tools/media-forensics",
-    "banner": "/assets/img/page-bg/media-forensics.png"
+    "banner": "assets/img/page-bg/media-forensics.png"
   },
   {
     "name": "Loot Tables",
@@ -61,6 +61,20 @@
     ],
     "status": "Public",
     "url": "https://sites.google.com/view/7sierratango1/tools/loot-tables",
-    "banner": "/assets/img/button-bg.png"
+    "banner": "assets/img/button-bg.png"
+  },
+  {
+    "name": "ClamGUI",
+    "description": "Windows graphical user interface for ClamAV antivirus.",
+    "tags": [
+      "tool",
+      "windows",
+      "security",
+      "antivirus",
+      "gui"
+    ],
+    "status": "Public",
+    "url": "https://drive.google.com/file/d/1Jm91AZaBOC5rdwB8QYo2wsr7S2jRVTQy/view",
+    "banner": "assets/img/button-bg.png"
   }
-  ]
+]
