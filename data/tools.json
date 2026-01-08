@@ -65,7 +65,7 @@
   },
   
  {
-    "name": ClamGUI",
+    "name": "ClamGUI",
     "description": "Windows GUI for ClamAV",
     "tags": [
       "tool",
