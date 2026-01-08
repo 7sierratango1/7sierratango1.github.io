@@ -62,5 +62,21 @@
     "status": "Public",
     "url": "https://sites.google.com/view/7sierratango1/tools/loot-tables",
     "banner": "/assets/img/button-bg.png"
+  },
+  
+ {
+    "name": ClamGUI",
+    "description": "Windows GUI for ClamAV",
+    "tags": [
+      "tool",
+      "Windows",
+      "GUI",
+      "reference"
+    ],
+    "status": "Public",
+    "url": "https://drive.google.com/file/d/1Jm91AZaBOC5rdwB8QYo2wsr7S2jRVTQy/view?usp=drive_link",
+    "banner": "/assets/img/button-bg.png"
   }
+
+  
 ]
