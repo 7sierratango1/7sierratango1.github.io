@@ -249,7 +249,7 @@ html, body {
 }
 
 body {
-  background-image: url("/assets/img/site-background.png");
+  background-image: url("assets/img/site-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -260,7 +260,7 @@ body {
 .btn,
 .pill,
 .item {
-  background-image: url("/assets/img/button-bg.png");
+  background-image: url("assets/img/button-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -330,4 +330,24 @@ footer {
 .tool-actions{
   display:flex;
   justify-content:flex-end;
+}
+
+/* === Rev 1.0.13 Per-tool button backgrounds === */
+a.btn.tool-open{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+a.btn.tool-open::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.55));
+  pointer-events:none;
+}
+a.btn.tool-open{
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.75);
 }

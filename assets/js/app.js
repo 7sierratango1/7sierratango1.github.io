@@ -13,8 +13,8 @@ function renderList(container, items) {
     const el = document.createElement("div");
     el.className = "item tool-card";
 
-    const bannerUrl = it.banner || "/assets/img/button-bg.png";
-    const safeBanner = String(bannerUrl).replace(/"/g, "&quot;");
+    const bannerUrl = (it.banner || "assets/img/button-bg.png");
+    const safeBanner = normalizePath(bannerUrl).replace(/"/g, "&quot;");
 
     el.innerHTML = `
       <div class="tool-banner" style="background-image:url('${safeBanner}')">
@@ -32,7 +32,7 @@ function renderList(container, items) {
         </div>
 
         <div class="tool-actions">
-          ${it.url ? `<a class="btn primary" href="${it.url}" target="_blank" rel="noreferrer">Open</a>` : ""}
+          ${it.url ? `<a class="btn primary tool-open" style="${it.buttonBg ? `background-image:url('${normalizePath(it.buttonBg)}')` : ``}" href="${it.url}" target="_blank" rel="noreferrer">Open</a>` : ""}
         </div>
       </div>
     `;
@@ -46,6 +46,11 @@ function badgeColor(tag) {
   if (t.includes("tool")) return "blue";
   if (t.includes("member") || t.includes("subscriber")) return "pink";
   return "";
+}
+
+function normalizePath(p){
+  const s = String(p || "");
+  return s.startsWith("/") ? s.slice(1) : s;
 }
 
 function escapeHtml(str) {
