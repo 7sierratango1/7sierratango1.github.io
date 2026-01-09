@@ -359,3 +359,14 @@ a.btn.tool-open{
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* === Rev 1.1.00: Default page background fallback === */
+html, body { min-height: 100%; }
+body{
+  background-image: url("assets/img/page-bg/default-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body.page-bg-set{ }

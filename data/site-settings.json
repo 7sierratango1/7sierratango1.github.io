@@ -1,0 +1,60 @@
+{
+  "note": "On static hosting this file is still publicly accessible if someone knows the path. It's for convenience/config, not security.",
+  "defaults": {
+    "pageBackground": "assets/img/page-bg/default-bg.png",
+    "toolCardFallbackBanner": "assets/img/button-bg.png",
+    "toolButtonFallback": "assets/img/button-bg.png"
+  },
+  "pages": {
+    "index.html": {
+      "background": "assets/img/page-bg/default-bg.png"
+    },
+    "tools.html": {
+      "background": "assets/img/page-bg/toolsbg.png"
+    },
+    "games.html": {
+      "background": "assets/img/page-bg/default-bg.png"
+    },
+    "3d-printing.html": {
+      "background": "assets/img/buttons/3d.png"
+    },
+    "books.html": {
+      "background": "assets/img/page-bg/default-bg.png"
+    },
+    "audio.html": {
+      "background": "assets/img/page-bg/default-bg.png"
+    },
+    "about.html": {
+      "background": "assets/img/page-bg/default-bg.png"
+    },
+    "contact.html": {
+      "background": "assets/img/page-bg/default-bg.png"
+    },
+    "stream.html": {
+      "background": "assets/img/page-bg/default-bg.png"
+    }
+  },
+  "toolImages": {
+    "Diablo 4 Name Generator": {
+      "banner": "assets/img/buttons/namegen.png",
+      "buttonBg": "assets/img/buttons/namegen.png"
+    },
+    "Necromancer Damage Calculator": {
+      "banner": "assets/img/buttons/necrodc.png",
+      "buttonBg": "assets/img/buttons/necrodc.png"
+    },
+    "Media Forensics Toolkit": {
+      "banner": "assets/img/buttons/forensics.png",
+      "buttonBg": "assets/img/buttons/forensics.png"
+    },
+    "ClamGUI": {
+      "banner": "assets/img/buttons/clamgui.png",
+      "buttonBg": "assets/img/buttons/clamgui.png"
+    }
+  },
+  "links": {
+    "discord": "https://discord.gg/zRRduc8aNN",
+    "battleNetUrl": "https://battle.net/",
+    "battleTag": "Tango71#1523"
+  }
+}

@@ -14,6 +14,38 @@ function esc(str) {
     .replaceAll("'", "&#39;");
 }
 
+
+let SITE_SETTINGS = null;
+
+async function loadSiteSettings(){
+  if (SITE_SETTINGS) return SITE_SETTINGS;
+  try{
+    SITE_SETTINGS = await loadJson("data/site-settings.json");
+  }catch{
+    SITE_SETTINGS = { defaults: { pageBackground: "assets/img/page-bg/default-bg.png", toolCardFallbackBanner:"assets/img/button-bg.png", toolButtonFallback:"assets/img/button-bg.png" }, pages: {}, toolImages: {} };
+  }
+  return SITE_SETTINGS;
+}
+
+function currentPageKey(){
+  const p = (location.pathname || "").replace(/^\/+/, "");
+  if (p && p.endsWith(".html")) return p;
+  return "index.html";
+}
+
+function applyPageBackground(settings){
+  const key = currentPageKey();
+  const bg = (settings.pages && settings.pages[key] && settings.pages[key].background) || (settings.defaults && settings.defaults.pageBackground) || "assets/img/page-bg/default-bg.png";
+  document.body.classList.add("page-bg-set");
+  const bgRel = String(bg || "").replace(/^\/+/, "");
+  document.body.style.backgroundImage = `url("${bgRel}")`;
+}
+
+function getToolOverrides(settings, toolName){
+  const m = (settings.toolImages || {});
+  return m[toolName] || null;
+}
+
 async function loadJson(path) {
   const res = await fetch(normalizePath(path), { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
