@@ -249,7 +249,7 @@ html, body {
 }
 
 body {
-  background-image: url("assets/img/site-background.png");
+  background-image: url("../img/site-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -260,7 +260,7 @@ body {
 .btn,
 .pill,
 .item {
-  background-image: url("assets/img/button-bg.png");
+  background-image: url("../img/button-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -363,7 +363,7 @@ a.btn.tool-open{
 /* === Rev 1.1.00: Default page background fallback === */
 html, body { min-height: 100%; }
 body{
-  background-image: url("assets/img/page-bg/default-bg.png");
+  background-image: url("../img/page-bg/default-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

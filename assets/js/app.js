@@ -28,8 +28,11 @@ async function loadSiteSettings(){
 }
 
 function currentPageKey(){
-  const p = (location.pathname || "").replace(/^\/+/, "");
-  if (p && p.endsWith(".html")) return p;
+  // Use the last path segment so this works on GitHub Pages project sites (/<repo>/page.html)
+  const raw = (location.pathname || "").replace(/^\/+/, "");
+  const seg = raw.split("/").filter(Boolean);
+  const last = seg.length ? seg[seg.length-1] : "";
+  if (last && last.endsWith(".html")) return last;
   return "index.html";
 }
 
@@ -143,7 +146,9 @@ async function initListPage(jsonPath) {
 }
 
 // Auto-init based on page-provided data attribute (preferred)
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  const settings = await loadSiteSettings();
+  applyPageBackground(settings);
   const root = document.documentElement;
   const path = root.getAttribute("data-json");
   if (path) initListPage(path);
