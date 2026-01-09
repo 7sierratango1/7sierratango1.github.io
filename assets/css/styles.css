@@ -351,3 +351,11 @@ a.btn.tool-open{
   color: #fff;
   text-shadow: 0 0 10px rgba(0,0,0,0.75);
 }
+
+
+/* Per-item button backgrounds */
+.tool-btn{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,77 +1,118 @@
-async function loadJson(path) {
-  const res = await fetch(path, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-  return res.json();
+// 7SierraTango1 Modern Site - List renderer (Tools/Games/3D/Audio)
+function normalizePath(p) {
+  if (!p) return "";
+  // support both "/assets/..." and "assets/..." in JSON/HTML
+  return String(p).replace(/^\//, "");
 }
 
-function qs(sel, root=document){ return root.querySelector(sel); }
-function qsa(sel, root=document){ return Array.from(root.querySelectorAll(sel)); }
+function esc(str) {
+  return String(str ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+async function loadJson(path) {
+  const res = await fetch(normalizePath(path), { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+  return await res.json();
+}
+
+function makeCard(it) {
+  const banner = normalizePath(it.banner || "");
+  const bannerStyle = banner
+    ? `style="background-image:url('${banner}');"`
+    : "";
+
+  const buttonBg = normalizePath(it.buttonBg || "");
+  const buttonStyle = buttonBg
+    ? `style="background-image:url('${buttonBg}');"`
+    : "";
+
+  const tags = Array.isArray(it.tags) ? it.tags : [];
+  const tagsHtml = tags.length
+    ? `<div class="tags">${tags.map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>`
+    : "";
+
+  const status = it.status ? `<span class="badge">${esc(it.status)}</span>` : "";
+
+  return `
+    <div class="tool-card">
+      <div class="tool-banner" ${bannerStyle}></div>
+      <div class="tool-body">
+        <div class="tool-top">
+          <h3 class="tool-title">${esc(it.name || "Untitled")}</h3>
+          ${status}
+        </div>
+        <p class="tool-desc">${esc(it.description || "")}</p>
+        ${tagsHtml}
+        <div class="tool-actions">
+          ${it.url ? `<a class="btn primary tool-btn" ${buttonStyle} href="${esc(it.url)}" target="_blank" rel="noreferrer">Open</a>` : ""}
+        </div>
+      </div>
+    </div>
+  `;
+}
 
 function renderList(container, items) {
   container.innerHTML = "";
+  if (!items || !items.length) {
+    container.innerHTML = `<div class="card"><p style="margin:0;">No items found.</p></div>`;
+    return;
+  }
+  const frag = document.createDocumentFragment();
   for (const it of items) {
     const el = document.createElement("div");
-    el.className = "item tool-card";
+    el.innerHTML = makeCard(it);
+    frag.appendChild(el.firstElementChild);
+  }
+  container.appendChild(frag);
+}
 
-    const bannerUrl = (it.banner || "assets/img/button-bg.png");
-    const safeBanner = normalizePath(bannerUrl).replace(/"/g, "&quot;");
+function wireSearch(input, items, onFiltered) {
+  const all = Array.isArray(items) ? items : [];
+  const handler = () => {
+    const q = String(input.value || "").trim().toLowerCase();
+    if (!q) return onFiltered(all);
 
-    el.innerHTML = `
-      <div class="tool-banner" style="background-image:url('${safeBanner}')">
-        <div class="tool-banner-overlay">
-          <h3 class="tool-title">${escapeHtml(it.name)}</h3>
-          ${it.status ? `<span class="badge blue tool-status">${escapeHtml(it.status)}</span>` : ""}
-        </div>
-      </div>
+    const filtered = all.filter(it => {
+      const hay = [
+        it.name,
+        it.description,
+        ...(Array.isArray(it.tags) ? it.tags : []),
+        it.status
+      ].join(" ").toLowerCase();
+      return hay.includes(q);
+    });
 
-      <div class="tool-body">
-        <p class="tool-desc">${escapeHtml(it.description || "")}</p>
+    onFiltered(filtered);
+  };
 
-        <div class="tool-tags">
-          ${(it.tags||[]).map(t => `<span class="badge ${badgeColor(t)}">${escapeHtml(t)}</span>`).join("")}
-        </div>
+  input.addEventListener("input", handler);
+  handler();
+}
 
-        <div class="tool-actions">
-          ${it.url ? `<a class="btn primary tool-open" style="${it.buttonBg ? `background-image:url('${normalizePath(it.buttonBg)}')` : ``}" href="${it.url}" target="_blank" rel="noreferrer">Open</a>` : ""}
-        </div>
-      </div>
-    `;
-    container.appendChild(el);
+async function initListPage(jsonPath) {
+  const q = document.getElementById("q");
+  const list = document.getElementById("list");
+  if (!list) return;
+
+  try {
+    const items = await loadJson(jsonPath);
+    const all = Array.isArray(items) ? items : [];
+    if (q) wireSearch(q, all, (filtered) => renderList(list, filtered));
+    else renderList(list, all);
+  } catch (e) {
+    console.error(e);
+    list.innerHTML = `<div class="card"><p style="margin:0;">Failed to load content.</p></div>`;
   }
 }
 
-function badgeColor(tag) {
-  const t = String(tag || "").toLowerCase();
-  if (t.includes("game")) return "green";
-  if (t.includes("tool")) return "blue";
-  if (t.includes("member") || t.includes("subscriber")) return "pink";
-  return "";
-}
-
-function normalizePath(p){
-  const s = String(p || "");
-  return s.startsWith("/") ? s.slice(1) : s;
-}
-
-function escapeHtml(str) {
-  return String(str ?? "")
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
-}
-
-function wireSearch(inputSel, items, onFiltered) {
-  const input = qs(inputSel);
-  input?.addEventListener("input", () => {
-    const q = input.value.trim().toLowerCase();
-    if (!q) return onFiltered(items);
-    const filtered = items.filter(it =>
-      [it.name, it.description, ...(it.tags||[])].some(v => String(v||"").toLowerCase().includes(q))
-    );
-    onFiltered(filtered);
-  });
-}
-
-window.Site = { loadJson, renderList, wireSearch, qs, qsa };
+// Auto-init based on page-provided data attribute (preferred)
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.documentElement;
+  const path = root.getAttribute("data-json");
+  if (path) initListPage(path);
+});

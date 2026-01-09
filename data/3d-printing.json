@@ -10,7 +10,9 @@
       "cad"
     ],
     "status": "Public",
-    "url": "https://sites.google.com/view/7sierratango1/thread-generator"
+    "url": "https://sites.google.com/view/7sierratango1/thread-generator",
+    "buttonBg": "assets/img/buttons/bolts.png",
+    "banner": "assets/img/buttons/bolts.png"
   },
   {
     "name": "Lithograph Maker",
@@ -23,6 +25,8 @@
       "stl"
     ],
     "status": "Public",
-    "url": "https://sites.google.com/view/7sierratango1/lithograph-maker"
+    "url": "https://sites.google.com/view/7sierratango1/lithograph-maker",
+    "buttonBg": "assets/img/buttons/3d.png",
+    "banner": "assets/img/buttons/3d.png"
   }
 ]
