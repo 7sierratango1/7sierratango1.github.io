@@ -1,5 +1,18 @@
 [
   {
+    "name": "The Forbidden Codex",
+    "description": "Free game that integrates with Twitch (download).",
+    "tags": [
+      "game",
+      "twitch",
+      "diablo"
+    ],
+    "status": "Public",
+    "url": "forbidden-codex.html",
+    "banner": "/assets/img/page-bg/forbidden-codex.png",
+    "buttonBg": "/assets/img/page-bg/forbidden-codex.png"
+  },
+  {
     "name": "Twitch Chat Trivia",
     "description": "Interactive trivia game for Twitch chat.",
     "tags": [

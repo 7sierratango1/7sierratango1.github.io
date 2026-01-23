@@ -72,6 +72,8 @@ function makeCard(it) {
     : "";
 
   const status = it.status ? `<span class="badge">${esc(it.status)}</span>` : "";
+  const isExternal = it.url ? /^(?:https?:)?\/\//i.test(it.url) : false;
+  const linkAttrs = isExternal ? `target="_blank" rel="noreferrer"` : "";
 
   return `
     <div class="tool-card">
@@ -84,7 +86,7 @@ function makeCard(it) {
         <p class="tool-desc">${esc(it.description || "")}</p>
         ${tagsHtml}
         <div class="tool-actions">
-          ${it.url ? `<a class="btn primary tool-btn" ${buttonStyle} href="${esc(it.url)}" target="_blank" rel="noreferrer">Open</a>` : ""}
+          ${it.url ? `<a class="btn primary tool-btn" ${buttonStyle} href="${esc(it.url)}" ${linkAttrs}>Open</a>` : ""}
         </div>
       </div>
     </div>

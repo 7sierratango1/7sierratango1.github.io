@@ -32,6 +32,9 @@
     },
     "stream.html": {
       "background": "assets/img/page-bg/default-bg.png"
+    },
+    "forbidden-codex.html": {
+      "background": "/assets/img/page-bg/forbidden-codex.png"
     }
   },
   "toolImages": {
