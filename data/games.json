@@ -1,16 +1,11 @@
 [
   {
     "name": "The Forbidden Codex",
-    "description": "Free game that integrates with Twitch (download).",
-    "tags": [
-      "game",
-      "twitch",
-      "diablo"
-    ],
-    "status": "Public",
-    "url": "forbidden-codex.html",
+    "description": "A free Twitch-integrated game you can download and play during stream.",
+    "tags": ["game", "twitch", "free"],
+    "status": "Free",
+    "url": "./forbidden-codex.html",
     "banner": "/assets/img/page-bg/forbidden-codex.png",
     "buttonBg": "/assets/img/page-bg/forbidden-codex.png"
-  },
-  
+  }
 ]
