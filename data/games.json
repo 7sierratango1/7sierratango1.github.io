@@ -12,17 +12,5 @@
     "banner": "/assets/img/page-bg/forbidden-codex.png",
     "buttonBg": "/assets/img/page-bg/forbidden-codex.png"
   },
-  {
-    "name": "Twitch Chat Trivia",
-    "description": "Interactive trivia game for Twitch chat.",
-    "tags": [
-      "game",
-      "twitch",
-      "trivia"
-    ],
-    "status": "Public",
-    "url": "https://sites.google.com/view/7sierratango1/games/trivia-game",
-    "buttonBg": "assets/img/buttons/trivia.png",
-    "banner": "assets/img/buttons/trivia.png"
-  }
+  
 ]
